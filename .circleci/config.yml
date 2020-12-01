@@ -54,7 +54,7 @@ jobs:
           at: /tmp
       - run:
           name: Deploy app
-          command: npx netlify-cli deploy --prod --dir /tmp/server-doc --message "site deployed from circle ci"  --site 9f2050c4-7f36-43a5-a801-50439ffceb17
+          command: npx netlify-cli deploy --prod --dir /tmp/server-doc --message "site deployed from circle ci"  --site API_ID
   back-test-unit:
     docker:
       - image: circleci/node:dubnium-browsers
