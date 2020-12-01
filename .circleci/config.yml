@@ -53,8 +53,9 @@ jobs:
       - attach_workspace:
           at: /tmp
       - run:
-          name: Deploy app
           command: npm install netlify-cli -g
+      - run:
+          name: Deploy app
           command: netlify deploy --prod --dir /tmp/server-doc --message "site deployed from circle ci"  --site 9f2050c4-7f36-43a5-a801-50439ffceb17
   back-test-unit:
     docker:
